@@ -12,28 +12,29 @@ def prefix_calculations():
     while True:
         user_input = raw_input(">")
         tokens = user_input.split(" ")
-        if len(tokens) > 1:
-            num1 = float(tokens[1])
-        if len(tokens) > 2:
-            num2 = float(tokens[2])
+        floats = []
+        for token in tokens:
+            if len(tokens) > 1:
+                token = float(token)
+                floats.append(token)
 
         if tokens[0] == "q":
             break
 
         elif tokens[0] == "+":
-            print add(num1, num2)
+            print add(floats)
         
         elif tokens[0] == "-":
-            print subtract(num1, num2)
+            print subtract(floats)
         
         elif tokens[0] == "*":
-            print multiply(num1, num2)
+            print multiply(floats)
 
         elif tokens[0] == "/":
-            print divide(num1, num2)
+            print divide(floats)
 
         elif tokens[0] == "square":
-            print square(num1)
+            print square(floats)
 
         elif tokens[0] == "cube":
             print cube(num1)
