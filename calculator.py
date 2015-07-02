@@ -12,35 +12,39 @@ def prefix_calculations():
     while True:
         user_input = raw_input(">")
         tokens = user_input.split(" ")
+        if len(tokens) > 1:
+            num1 = int(tokens[1])
+        if len(tokens) > 2:
+            num2 = int(tokens[2])
 
         if tokens[0] == "q":
             break
 
         elif tokens[0] == "+":
-            print add(int(tokens[1]), int(tokens[2]))
+            print add(num1, num2)
         
         elif tokens[0] == "-":
-            print subtract(int(tokens[1]), int(tokens[2]))
+            print subtract(num1, num2)
         
         elif tokens[0] == "*":
-            print multiply(int(tokens[1]), int(tokens[2]))
+            print multiply(num1, num2)
 
         elif tokens[0] == "/":
-            print divide(int(tokens[1]), int(tokens[2]))
+            print divide(num1, num2)
 
         elif tokens[0] == "square":
-            print square(int(tokens[1]))
+            print square(num1)
 
         elif tokens[0] == "cube":
-            print cube(int(tokens[1]))
+            print cube(num1)
 
         elif tokens[0] == "pow":
-            print power(int(tokens[1]), int(tokens[2]))
+            print power(num1, num2)
 
         elif tokens[0] == "mod":
-            print mod(int(tokens[1]), int(tokens[2]))
+            print mod(num1, num2)
 
 
-
+print " Enter a math problem like this: + 2 2" 
 prefix_calculations()
 
