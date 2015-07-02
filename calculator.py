@@ -13,7 +13,7 @@ def prefix_calculations():
         user_input = raw_input(">")
         tokens = user_input.split(" ")
         floats = []
-        for token in tokens:
+        for token in tokens[1:]:
             if len(tokens) > 1:
                 token = float(token)
                 floats.append(token)
@@ -34,10 +34,16 @@ def prefix_calculations():
             print divide(floats)
 
         elif tokens[0] == "square":
-            print square(floats)
+            if len(floats) > 1:
+                print "Error! Square only takes one argument!"
+            else:
+                print square(floats[0])
 
         elif tokens[0] == "cube":
-            print cube(num1)
+            if len(floats) > 1:
+                print "Error! Cube only takes one argument!"
+            else:
+                print cube(floats[0])
 
         elif tokens[0] == "pow":
             print power(num1, num2)
