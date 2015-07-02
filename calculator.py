@@ -13,9 +13,9 @@ def prefix_calculations():
         user_input = raw_input(">")
         tokens = user_input.split(" ")
         if len(tokens) > 1:
-            num1 = int(tokens[1])
+            num1 = float(tokens[1])
         if len(tokens) > 2:
-            num2 = int(tokens[2])
+            num2 = float(tokens[2])
 
         if tokens[0] == "q":
             break
