@@ -46,10 +46,16 @@ def prefix_calculations():
                 print cube(floats[0])
 
         elif tokens[0] == "pow":
-            print power(num1, num2)
+            if len(floats) > 2:
+                print "Error! Power only takes two arguments!"
+            else:
+                print power(floats[0], floats[1])
 
         elif tokens[0] == "mod":
-            print mod(num1, num2)
+            if len(floats) > 2:
+                print "Error! Modulo only takes two arguments!"
+            else:
+                print mod(floats[0], floats[1])
 
 
 print " Enter a math problem like this: + 2 2" 
